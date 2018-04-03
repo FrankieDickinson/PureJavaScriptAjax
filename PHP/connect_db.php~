@@ -1,0 +1,16 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+$servername = "localhost";
+$username = "dox";
+$password = "gadgetsn1";
+$database = "uni";
+
+$con = mysqli_connect($servername, $username, $password);
+if(!$con){
+
+}else{
+echo "Connection success";
+}
+?>

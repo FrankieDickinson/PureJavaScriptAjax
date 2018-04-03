@@ -1,0 +1,28 @@
+<?php
+
+
+
+$notes = $_REQUEST["notes"];
+$user = $_REQUEST["user"];
+
+$servername = "localhost";
+$username = "dox";
+$password = "gadgetsn1";
+$database = "uni";
+
+$con = mysqli_connect($servername, $username, $password);
+mysqli_select_db($con, $database);
+
+$query = "UPDATE Users SET notes='$notes' WHERE username='$user'";
+
+
+if(mysqli_query($con, $query)){
+    echo "Success"; 
+}else {
+    echo "Fail";
+}
+
+mysqli_close($con);
+
+
+?>
